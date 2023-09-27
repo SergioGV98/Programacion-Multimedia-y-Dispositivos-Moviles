@@ -2,18 +2,17 @@ import 'dart:math';
 import 'dart:io';
 
 void adivinaElNumero({required final int max}) {
- Random r = Random();
-  String jugar = 'S'; 
-  
+  Random r = Random();
+  String jugar = 'S';
+
   while (jugar == 'S') {
     int intento = 1;
     int numero = r.nextInt(max);
     int? numIntroducido;
 
     stdout.writeln("Adivina el número entre 0 y $max: ");
-    
-    do {
 
+    do {
       stdout.write("Intento $intento: ");
       String? linea = stdin.readLineSync();
 
@@ -21,7 +20,6 @@ void adivinaElNumero({required final int max}) {
         numIntroducido = int.tryParse(linea);
 
         if (numIntroducido != null) {
-
           if (numIntroducido > numero) {
             stdout.write("Te has pasado. Intenta de nuevo.\n");
           } else if (numIntroducido < numero) {
@@ -31,11 +29,12 @@ void adivinaElNumero({required final int max}) {
             stdout.write("Descubrirlo te ha llevado $intento intentos.\n");
           }
         } else {
-          stdout.write("El número introducido no es válido. Intenta de nuevo.\n");
+          stdout
+              .write("El número introducido no es válido. Intenta de nuevo.\n");
         }
-
       } else {
-        stdout.write("No puedes introducir una cadena vacía o nula. Intenta de nuevo.\n");
+        stdout.write(
+            "No puedes introducir una cadena vacía o nula. Intenta de nuevo.\n");
       }
 
       intento += 1;
