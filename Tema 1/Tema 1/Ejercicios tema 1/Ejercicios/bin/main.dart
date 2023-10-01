@@ -2,16 +2,23 @@ import 'package:ejercicio1/ecuaciones.dart' as ecuaciones;
 import 'dart:io';
 
 void main(List<String> arguments) {
-  //funciones.adivinaElNumero(max: 1000);
-  //stdout.write(ecuaciones.numSolucionesEcGrado2(1, 0, 0));
+
+  // Ejercicio 2
+  /*
+  stdout.writeln(ecuaciones.numSolucionesEcGrado2(1, 1, -2)); // 2
+  stdout.writeln(ecuaciones.numSolucionesEcGrado2(1, 0, 0)); // 1
+  stdout.writeln(ecuaciones.numSolucionesEcGrado2(2, 3, 4)); // 0
+  */
 
   // Ejercicio 3
+  /*
   stdout.writeln(ecuaciones.coeficiente(1)); // "1"
   stdout.writeln(ecuaciones.coeficiente(-1)); // "-1"
   stdout.writeln(ecuaciones.coeficiente(3, 1)); // "3x"
   stdout.writeln(ecuaciones.coeficiente(-1, 1)); // "–x"
   stdout.writeln(ecuaciones.coeficiente(-3, 2)); // "–3x2"
   stdout.writeln(ecuaciones.coeficiente(-3, 3)); // null
+  */
 
   // Ejercicio 4
   /*
@@ -24,4 +31,12 @@ void main(List<String> arguments) {
   stdout.writeln(ecuaciones.polinomioGrado2Str(c: 5)); // "5"
   stdout.writeln(ecuaciones.polinomioGrado2Str()); // "0" 
   */
+
+  // Ejercicio 5
+  String jugar;
+  do{
+    ecuaciones.solucionadorEcuacionesGrado2();
+    stdout.writeln("¿Deseas resolver otra ecuación? (s/n)");
+    jugar = stdin.readLineSync()?.toUpperCase() ?? 'N';
+  } while (jugar == 'S');
 }
