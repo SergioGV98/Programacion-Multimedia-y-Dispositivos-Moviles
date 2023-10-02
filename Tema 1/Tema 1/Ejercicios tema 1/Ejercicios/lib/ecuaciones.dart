@@ -33,22 +33,23 @@ String polinomioGrado2Str({double? a, double? b, double? c}) {
     return '0';
   }
 
-  return '${a != null ? coeficiente(a, 2) : ''}${b != null ? coeficiente(b, 1) : ''}${c != null ? coeficiente(c) : ''}';
+  return '${a != null ? (c == -1 ? "-x" : "x") : ''}${b != null ? coeficiente(b, 1) : ''}${c != null ? coeficiente(c) : ''}';
 }
 
 // Ejercicio 5
 
 void solucionadorEcuacionesGrado2() {
   stdout.writeln("Solucionador de ecuaciones de segundo grado");
-  stdout.write("Introduce los coeficientes de la ecuacion separados por comas: ");
+  stdout
+      .write("Introduce los coeficientes de la ecuacion separados por comas: ");
   String? texto = stdin.readLineSync();
   double a = 0.0, b = 0.0, c = 0.0;
   if (texto != null) {
-
-    RegExp regex = RegExp(r'^[a-zA-Z]+$'); 
+    RegExp regex = RegExp(r'^[a-zA-Z]+$');
     if (regex.hasMatch(texto)) {
-      stdout.writeln("El texto contiene caracteres no válidos. Inténtalo de nuevo.");
-      return; 
+      stdout.writeln(
+          "El texto contiene caracteres no válidos. Inténtalo de nuevo.");
+      return;
     }
 
     List<String> coeficientes = texto.split(',');
@@ -73,4 +74,4 @@ void solucionadorEcuacionesGrado2() {
   } else {
     return;
   }
-} 
+}
