@@ -20,7 +20,7 @@ void main(List<String> arguments) {
   */
 
   // Ejercicio 4
-
+  
   stdout.writeln(
       ecuaciones.polinomioGrado2Str(a: 1, b: -5, c: -2)); // "x2 -5x –2"
   stdout.writeln(ecuaciones.polinomioGrado2Str(a: -2, c: -2)); // "–2x2 –2"
@@ -30,6 +30,7 @@ void main(List<String> arguments) {
   stdout.writeln(ecuaciones.polinomioGrado2Str(b: 8)); // "8x"
   stdout.writeln(ecuaciones.polinomioGrado2Str(c: 5)); // "5"
   stdout.writeln(ecuaciones.polinomioGrado2Str()); // "0"
+  
 
   // Ejercicio 5
   /*
