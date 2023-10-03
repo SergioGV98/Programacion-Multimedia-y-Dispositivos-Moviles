@@ -8,7 +8,7 @@ void main(List<String> arguments) {
   stdout.writeln(ecuaciones.numSolucionesEcGrado2(1, 0, 0)); // 1
   stdout.writeln(ecuaciones.numSolucionesEcGrado2(2, 3, 4)); // 0
   */
-  
+
   // Ejercicio 3
   /*
   stdout.writeln(ecuaciones.coeficiente(1)); // "1"
@@ -32,11 +32,12 @@ void main(List<String> arguments) {
   */
 
   // Ejercicio 5
-  
+
+  /*
   String jugar;
   do {
     ecuaciones.solucionadorEcuacionesGrado2();
     stdout.writeln("¿Deseas resolver otra ecuación? (s/n)");
     jugar = stdin.readLineSync()?.toUpperCase() ?? 'N';
-  } while (jugar == 'S'); 
+  } while (jugar == 'S'); */
 }

@@ -20,7 +20,9 @@ int numSolucionesEcGrado2(double a, double b, double c) {
 String? coeficiente(double c, [double n = 0]) {
   // Parametro c obligatorio () y parametro n es opcional [] y valor por defecto 0
   if (n >= 0 && n <= 2) {
-    return ((c == -1 || c == 1) && n == 1) ? (c == -1 ? "-x" : "x") : '${c == 1 ? c.toStringAsFixed(0) : c.toStringAsFixed(0)}${n == 0 ? '' : 'x${n == 1 ? '' : '²'}'}';
+    return ((c == -1 || c == 1) && n == 1)
+        ? (c == -1 ? "-x" : "x")
+        : '${c == 1 ? c.toStringAsFixed(0) : c.toStringAsFixed(0)}${n == 0 ? '' : 'x${n == 1 ? '' : '²'}'}';
   }
   return null;
 }
@@ -31,11 +33,10 @@ String polinomioGrado2Str({double? a, double? b, double? c}) {
     return '0';
   }
 
-return '${a != null ? (coeficiente(a, 2) == '1x²' ? 'x²' : coeficiente(a, 2) == '-1x²' ? '-x²' : '${a.toStringAsFixed(0)}x²') : ''}${b != null ? coeficiente(b, 1) : ''}${c != null ? coeficiente(c) : ''}';
+  return '${a != null ? (coeficiente(a, 2) == '1x²' ? 'x²' : coeficiente(a, 2) == '-1x²' ? '-x²' : '${a.toStringAsFixed(0)}x²') : ''}${b != null ? coeficiente(b, 1) : ''}${c != null ? coeficiente(c) : ''}';
 }
 
 // Ejercicio 5
-
 void solucionadorEcuacionesGrado2() {
   stdout.writeln("Solucionador de ecuaciones de segundo grado");
   stdout
