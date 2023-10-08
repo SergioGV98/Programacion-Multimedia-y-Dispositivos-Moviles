@@ -1,5 +1,4 @@
 import 'package:age_calculator/age_calculator.dart';
-
 class Usuario {
   // No nulables
   int numero;
@@ -11,29 +10,51 @@ class Usuario {
   String? nombre;
   String? apellidos;
   String? nacionalidad;
+
   // Ejercicio 4
   DateTime? nacimiento;
 
-  Usuario({required this.numero, required this.username, required this.password, required this.email}, // Hacerlos opcionales con nombre
-      {[String? nom, String? ape, String? nac, String? nacim]}) {
-    nombre = nom;
-    apellidos = ape;
-    nacionalidad = nac;
-    // Ejercicio 4
+  // Ejercicio 6
+  final DateTime creacion;
+
+  Usuario({ required this.numero, required this.username, required this.password, required this.email, this.nombre, this.apellidos, this.nacionalidad, String? nacim}) : creacion = DateTime.now()
+  {
     if (nacim != null) {
       nacimiento = DateTime.tryParse(nacim);
     }
   }
 
+  // Ejercicio 7
+  Usuario.anonimo() : numero = 0, username = '', password = '', email = '', nombre = null, apellidos = null, nacionalidad = null, nacimiento = null, creacion = DateTime.now();
+
+  // Ejercicio 8
+  factory Usuario.fromCSV(String csvData) {
+    final List<String> userData = csvData.split(',');
+
+    if (userData.length != 7) {
+      throw ArgumentError('La cadena debe contener 7 elementos separados por comas.');
+    }
+
+    return Usuario(
+      numero: int.parse(userData[0]),
+      username: userData[1],
+      password: userData[2],
+      email: userData[3],
+      nombre: userData[4].isEmpty ? null : userData[4],
+      apellidos: userData[5].isEmpty ? null : userData[5],
+      nacionalidad: userData[6].isEmpty ? null : userData[6],
+    );
+  }
+
   String get nombreCompleto {
-    return "$nombre$apellidos";
+    return "$nombre $apellidos";
   }
 
   int? get edad {
-    DateDuration duration;
+    DateDuration? duration;
     if (nacimiento != null) {
       duration = AgeCalculator.age(nacimiento!);
-      print(duration);
+       return duration.years;
     }
     return null;
   }
@@ -50,20 +71,21 @@ class Usuario {
       Nacionalidad: $nacionalidad
       Nacimiento: $nacimiento
       Edad: $edad
+      Creacion: $creacion
     )''';
   }
 
-  // Ejercicio 3
-
-  Usuario copyWith(
-      {int? numero,
-      String? username,
-      String? password,
-      String? email,
-      String? nombre,
-      String? apellidos,
-      String? nacionalidad}) {
+  Usuario copyWith({int? numero, String? username, String? password, String? email, String? nombre, String? apellidos, String? nacionalidad, DateTime? nacimiento }) 
+  {
     return Usuario(
-        numero!, username!, password!, email!, nombre, apellidos, nacionalidad);
+      numero: numero ?? this.numero,
+      username: username ?? this.username,
+      password: password ?? this.password,
+      email: email ?? this.email,
+      nombre: nombre ?? this.nombre,
+      apellidos: apellidos ?? this.apellidos,
+      nacionalidad: nacionalidad ?? this.nacionalidad,
+      nacim: nacimiento?.toIso8601String()
+    );
   }
 }
