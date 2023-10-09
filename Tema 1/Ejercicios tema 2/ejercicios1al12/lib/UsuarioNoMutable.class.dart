@@ -7,7 +7,6 @@ class UsuarioNoMutable {
   final String? apellidos;
   final String? nacionalidad;
   
-  // Ejercicio 9
  final DateTime? nacimiento;
 
   const UsuarioNoMutable._private({required this.numero, required this.username, required this.password, required this.email, this.nombre, this.apellidos, this.nacionalidad, this.nacimiento});

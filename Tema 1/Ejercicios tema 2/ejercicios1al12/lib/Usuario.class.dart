@@ -1,5 +1,6 @@
 import 'package:age_calculator/age_calculator.dart';
-class Usuario {
+import 'package:ejercicios2/Base.class.dart';
+class Usuario extends Base{
   // No nulables
   int numero;
   String username;
@@ -10,24 +11,18 @@ class Usuario {
   String? nombre;
   String? apellidos;
   String? nacionalidad;
-
-  // Ejercicio 4
   DateTime? nacimiento;
-
-  // Ejercicio 6
   final DateTime creacion;
 
-  Usuario({ required this.numero, required this.username, required this.password, required this.email, this.nombre, this.apellidos, this.nacionalidad, String? nacim}) : creacion = DateTime.now()
+  Usuario({ required this.numero, required this.username, required this.password, required this.email, this.nombre, this.apellidos, this.nacionalidad, String? nacim, Base? context}) : creacion = DateTime.now(), super(context: context)
   {
     if (nacim != null) {
       nacimiento = DateTime.tryParse(nacim);
     }
   }
 
-  // Ejercicio 7
   Usuario.anonimo() : numero = 0, username = '', password = '', email = '', nombre = null, apellidos = null, nacionalidad = null, nacimiento = null, creacion = DateTime.now();
 
-  // Ejercicio 8
   factory Usuario.fromCSV(String csvData) {
     final List<String> userData = csvData.split(',');
 
