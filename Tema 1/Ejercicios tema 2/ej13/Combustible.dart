@@ -1,0 +1,4 @@
+enum Combustible {
+    diesel,
+    gasolina
+}
