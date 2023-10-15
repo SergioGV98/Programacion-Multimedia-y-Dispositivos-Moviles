@@ -1,16 +1,17 @@
-import 'package:main/ejer13parte1.dart';
+import '../lib/ejer13parte1.dart';
+import '../lib/ejer13parte2.dart';
 
 void main(List<String> arguments) {
-  List<String> frutas = ["manzana", "fresa", "naranja"];
-  List<String> verduras = ["lechuga", "coliflor", "albahaca"];
 
-  //A)
-  List<dynamic> huerto = [frutas, verduras];
+  print("------------EJERCICIO 1 PARTE 1------------");
+  parte1ejercicio1();
+  print("------------EJERCICIO 1 PARTE 2------------");
+  parte1ejercicio2();
+  print("");
+  print("------------EJERCICIO 2 PARTE 1------------");
+  parte2ejercicio1();
+  print("------------EJERCICIO 1 PARTE 2------------");
+  parte2ejercicio2();
 
-  //B)
-  huerto.addAll(["olivo", "naranjo", "algarrobo"]);
 
-  //C)
-  List<dynamic> huertoPlurales = huerto.map((a) => "${a}s").toList();
-  print(huertoPlurales);
 }
