@@ -35,4 +35,5 @@ class MyApp extends StatelessWidget {
 
   // Basico()
   // basico2("Soy el widget básico 2 con tamFuente=50", 50)
+  // Enmarcador(basico2("Soy Basico2 dentro de Enmarcador", 50)
 }
