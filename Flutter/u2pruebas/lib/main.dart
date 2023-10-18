@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:u2pruebas/ejemplo1.dart';
 import 'package:u2pruebas/ejemplo2.dart';
+import 'package:u2pruebas/layouts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Demo2Page(),
+      home: Scaffold(body: SafeArea(child: Layout1())),
     );
   }
 }
