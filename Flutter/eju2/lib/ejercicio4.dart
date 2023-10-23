@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 
 Widget Enmarcador(Widget child) {
-  return Center(
-    child: Container(
+  return 
+  Container(
       width: 350,
       height: 250,
       padding: EdgeInsets.all(20),
@@ -19,6 +19,6 @@ Widget Enmarcador(Widget child) {
                 blurRadius: 8),
           ]),
       child: child,
-    ),
-  );
+    )
+  ;
 }

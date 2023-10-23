@@ -1,5 +1,6 @@
 import '../lib/ejer13parte1.dart';
 import '../lib/ejer13parte2.dart';
+import '../lib/ejer13parte3.dart';
 
 void main(List<String> arguments) {
   print("------------EJERCICIO 1 PARTE 1------------");
@@ -11,4 +12,6 @@ void main(List<String> arguments) {
   parte2ejercicio1();
   print("------------EJERCICIO 2 PARTE 2------------");
   parte2ejercicio2();
+  print("------------EJERCICIO 3 PARTE 1------------");
+  parte3ejercicio1();
 }
