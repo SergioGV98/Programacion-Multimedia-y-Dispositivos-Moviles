@@ -50,33 +50,103 @@ class Layout3 extends StatelessWidget {
     return Expanded(
         child: Column(children: [
       Expanded(
-        child: celda(
-          Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              celda(
-                  Container(
-                    padding: EdgeInsets.all(30),
-                    child: Text("F1C1\nMi fila está en un\nContainer con\npadding 20",
-                        textAlign: TextAlign.center),
-                  ),
-                  Colors.grey),
-              celda(
-                  Container(
-                    padding: EdgeInsets.all(30),
-                    child: Text("F1C2\nMi fila está en un\nContainer con\npadding 20",
-                        textAlign: TextAlign.center),
-                  ),
-                  Colors.white)
-            ])
-          ]),
-          Colors.red,
-        ),
-      ),
+          child: celda(
+        Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            celda(
+                Container(
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(right: 15, left: 15),
+                  child: Text(
+                      "F1C1\nMi fila está en un\nContainer con\npadding 20",
+                      textAlign: TextAlign.center),
+                ),
+                Colors.grey),
+            celda(
+                Container(
+                  child: Text(
+                      "F1C2\nMi fila está en un\nContainer con\npadding 20",
+                      textAlign: TextAlign.center),
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(right: 15, left: 15),
+                ),
+                Colors.white)
+          ])
+        ]),
+        Colors.red,
+      )),
       Expanded(
+          flex: 4,
           child: Row(children: [
-        Expanded(flex: 3, child: celda(texto("F2C1\nflex=3"), Colors.blue)),
-        Expanded(child: celda(texto("F2C2"), Colors.green))
-      ])),
+            Expanded(child: celda(texto("F2C1\nflex=3"), Colors.blue)),
+            Expanded(child: celda(texto("F2C2"), Colors.green))
+          ])),
+      Expanded(child: celda(texto("F3"), Colors.yellow))
+    ]));
+  }
+}
+
+class Layout4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: Column(children: [
+      Expanded(
+          child: celda(
+        Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            celda(
+                Container(
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(right: 15, left: 15),
+                  child: Text(
+                      "F1C1\nMi fila está en un\nContainer con\npadding 20",
+                      textAlign: TextAlign.center),
+                ),
+                Colors.grey),
+            celda(
+                Container(
+                  child: Text(
+                      "F1C2\nMi fila está en un\nContainer con\npadding 20",
+                      textAlign: TextAlign.center),
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(right: 15, left: 15),
+                ),
+                Colors.white)
+          ])
+        ]),
+        Colors.red,
+      )),
+      Expanded(
+        flex: 3,
+        child: Row(children: [
+          Expanded(child: celda(texto("F2C1\nflex=3"), Colors.blue)),
+          Expanded(
+            child: celda(
+              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  margin: EdgeInsets.only(right: 20, left: 20),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        celda(
+                            Text(
+                                "F2C2F1\nMi fila está en un\nContainer con\npadding 20",
+                                textAlign: TextAlign.center),
+                            Colors.grey),
+                        celda(
+                            Text(
+                                "F2C2F2\nMi fila está en un\nContainer con\npadding 20\nflex=2",
+                                textAlign: TextAlign.center),
+                            Colors.white)
+                      ]),
+                )
+              ]),
+              Colors.green,
+            ),
+          ),
+        ]),
+      ),
       Expanded(child: celda(texto("F3"), Colors.yellow))
     ]));
   }

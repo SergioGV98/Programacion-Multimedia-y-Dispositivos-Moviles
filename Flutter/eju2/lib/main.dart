@@ -5,6 +5,7 @@ import 'package:eju2/ejercicio3.dart';
 import 'package:eju2/ejercicio4.dart';
 import 'package:eju2/ejercicio5.dart';
 import 'package:eju2/ejercicio6.dart';
+import 'package:eju2/ejercicio7.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +24,10 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: Scaffold(
-            body: SafeArea(child: Layout3())));
+            body: SafeArea(
+                child: ImagenConDescripcion(
+                    imgUrl: "images/flutter-alt.png",
+                    child: Text("Logotipo de Flutter")))));
   }
 
   /**
