@@ -6,6 +6,7 @@ import 'package:eju2/ejercicio4.dart';
 import 'package:eju2/ejercicio5.dart';
 import 'package:eju2/ejercicio6.dart';
 import 'package:eju2/ejercicio7.dart';
+import 'package:eju2/ejercicio8.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +28,14 @@ class MyApp extends StatelessWidget {
             body: SafeArea(
                 child: ImagenConDescripcion(
                     imgUrl: "images/flutter-alt.png",
-                    child: Text("Logotipo de Flutter")))));
+                    child: Descripcion(
+                      titulo: "Logotipo de Flutter",
+                      descripcion: "El logotipo de Flutter es un trío de "
+                          "hojas azules que forman un triángulo, "
+                          "sugiriendo unidad y versatilidad. El "
+                          "color azul evoca confianza y tecnología, "
+                          "convirtiéndolo en un símbolo de innovación.",
+                    )))));
   }
 
   /**
@@ -58,4 +66,9 @@ class MyApp extends StatelessWidget {
                     ]))
   */
   // Ejercicio 6 Layout1()
+  // Ejercicio 7
+  /*
+  child: ImagenConDescripcion(
+                    imgUrl: "images/flutter-alt.png",
+                    child: Text("Logotipo de Flutter"))*/
 }

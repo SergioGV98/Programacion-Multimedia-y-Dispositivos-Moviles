@@ -10,17 +10,22 @@ class ImagenConDescripcion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5.0),
+    return Container(
+      color: Colors.grey[300],
       child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Container(
+              decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey, width: 3),
-                borderRadius: BorderRadius.circular(10)),
-            height: 95,
-            width: 95,
-            child: Image.asset(imgUrl),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              height: 95,
+              width: 95,
+              child: Image.asset(imgUrl),
+            ),
           ),
           Container(
             margin: EdgeInsets.only(left: 20),
@@ -32,9 +37,9 @@ class ImagenConDescripcion extends StatelessWidget {
   }
 }
 
-class Descripcion extends StatelessWidget {
+class Titulo extends StatelessWidget {
   String texto;
-  Descripcion({super.key, required this.texto});
+  Titulo({super.key, required this.texto});
 
   @override
   Widget build(BuildContext context) {
