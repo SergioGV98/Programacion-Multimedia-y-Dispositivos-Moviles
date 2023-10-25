@@ -11,43 +11,28 @@ class ImagenConDescripcion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       color: Colors.grey[300],
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(5),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey, width: 3),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white),
+                height: 95,
+                width: 95,
+                child: Image.asset(imgUrl),
+              )),
+          Expanded(
             child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey, width: 3),
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-              ),
-              height: 95,
-              width: 95,
-              child: Image.asset(imgUrl),
+              child: child,
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 20),
-            child: child,
-          ),
+          )
         ],
       ),
     );
-  }
-}
-
-class Titulo extends StatelessWidget {
-  String texto;
-  Titulo({super.key, required this.texto});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Text(texto,
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.black,
-            )));
   }
 }

@@ -9,15 +9,28 @@ class Descripcion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-        text: "Titulo: ",
-        style: TextStyle(fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextSpan(
-            text: titulo,
-            style: TextStyle(color: Colors.blue),
+          Text.rich(
+            TextSpan(
+              text: "Titulo: ",
+              style: TextStyle(fontWeight: FontWeight.bold),
+              children: [
+                TextSpan(
+                  text: titulo,
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ],
+            ),
           ),
+          SizedBox(height: 2),
+          Expanded(
+            child: Text.rich(TextSpan(text: descripcion),
+                maxLines: 3, overflow: TextOverflow.ellipsis),
+          )
         ],
       ),
     );
