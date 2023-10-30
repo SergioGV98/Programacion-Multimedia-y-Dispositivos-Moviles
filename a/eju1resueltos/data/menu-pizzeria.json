@@ -1,0 +1,51 @@
+{
+    "pizzas": {
+        "config": {
+            "sizes":[
+                {"id": 1, "name": "Pequeña", "price": 3},
+                {"id": 2, "name": "Mediana", "price": 5},
+                {"id": 3, "name": "Grande", "price": 8}
+            ],
+        
+            "dough":[
+                {"id": 1, "name": "Clásica", "price": 0},
+                {"id": 2, "name": "Fina", "price": 0}
+            ],
+        
+            "ingredients":[
+                {"id": 1, "name": "Jamón cocido", "price": 0.3},
+                {"id": 2, "name": "Cebolla", "price": 0.2},
+                {"id": 3, "name": "Calabacín", "price": 0.2},
+                {"id": 4, "name": "Champiñones", "price": 0.2},
+                {"id": 5, "name": "Pimiento", "price": 0.2},
+                {"id": 6, "name": "Maiz", "price": 0.1},
+                {"id": 7, "name": "Aceitunas verdes", "price": 0.2},
+                {"id": 8, "name": "Peperoni", "price": 0.5},
+                {"id": 9, "name": "Ternera", "price": 1},
+                {"id": 10, "name": "Bacon", "price": 0.3},
+                {"id": 11, "name": "Extra queso", "price": 0.5}
+            ],
+        
+            "sauces":[
+                {"id": 1, "name": "Solo salsa de tomate", "price": 0},
+                {"id": 2, "name": "Salsa barbacoa", "price": 0.4},
+                {"id": 3, "name": "Salsa hot", "price": 0.4},
+                {"id": 4, "name": "Salsa carbonara", "price": 0.4}
+            ]
+        },
+        "presets": [
+            {
+                "id": 1,
+                "name": "Prosciuto",
+                "sauceId": 1,
+                "ingredients": [1]
+            },
+            {
+                "id": 2,
+                "name": "Barbacoa",
+                "sauceId": 2,
+                "ingredients": [6,9,10]
+            }
+        ]
+    }
+}
