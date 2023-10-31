@@ -1,0 +1,37 @@
+====================================================================
+ Salida del Ejercicio 1
+--------------------------------------------------------------------
+a)
+Producto(
+	Id: 4
+	Nombre: Maleta de cuero
+	Precio: 100.0
+	Colores disponibles: Rojo, Negro
+	Categoria: Accesorios
+)
+
+--------------------------------------------------------------------
+b)
+Producto(
+	Id: 4
+	Nombre: Maleta
+	Precio: 80.0
+	Colores disponibles: Rojo, Negro
+	Tallas disponibles: 10L, 20L, 30L
+	Categoria: Accesorios
+)
+
+--------------------------------------------------------------------
+c)
+{"id":4,"nombre":"Maleta","precio":80.0,"colores":["Rojo","Negro"],"tallas":["10L","20L","30L"],"categoria":"Accesorios"}
+
+--------------------------------------------------------------------
+d)
+Producto(
+	Id: 1
+	Nombre: Camiseta
+	Precio: 20.99
+	Colores disponibles: Rojo, Azul, Negro
+	Tallas disponibles: S, M, L, XL
+	Categoria: Ropa
+)

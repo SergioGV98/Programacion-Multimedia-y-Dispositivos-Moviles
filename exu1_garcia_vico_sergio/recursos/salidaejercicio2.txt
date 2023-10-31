@@ -1,0 +1,328 @@
+====================================================================
+ Salida del Ejercicio 2
+--------------------------------------------------------------------
+a)
+Inventario:
+Producto(
+	Nombre: Camiseta
+	Precio: 15.0
+	Colores disponibles: Rojo, Verde
+	Tallas disponibles: 36, 37, 38
+	Categoria: Ropa
+)
+Producto(
+	Nombre: Pantalón
+	Precio: 15.0
+	Colores disponibles: Rojo, Verde
+	Categoria: Ropa
+)
+Producto(
+	Nombre: Bañador
+	Precio: 10.35
+	Colores disponibles: Marrón
+	Categoria: Ropa
+)
+
+--------------------------------------------------------------------
+b)
+{"productos":[{"nombre":"Camiseta","precio":15.0,"colores":["Rojo","Verde"],"tallas":["36","37","38"],"categoria":"Ropa"},{"nombre":"Pantalón","precio":15.0,"colores":["Rojo","Verde"],"categoria":"Ropa"},{"nombre":"Bañador","precio":10.35,"colores":["Marrón"],"categoria":"Ropa"}]}
+
+--------------------------------------------------------------------
+c) 
+Inventario:
+Producto(
+	Id: 1
+	Nombre: Camiseta
+	Precio: 20.99
+	Colores disponibles: Rojo, Azul, Negro
+	Tallas disponibles: S, M, L, XL
+	Categoria: Ropa
+)
+Producto(
+	Id: 2
+	Nombre: Zapatos deportivos
+	Precio: 49.99
+	Colores disponibles: Blanco, Negro, Gris
+	Tallas disponibles: 36, 37, 38, 39, 40, 41, 42
+	Categoria: Calzado
+)
+Producto(
+	Id: 3
+	Nombre: Mochila
+	Precio: 29.99
+	Colores disponibles: Azul, Verde, Negro
+	Categoria: Accesorios
+)
+Producto(
+	Id: 4
+	Nombre: Cámara digital
+	Precio: 299.99
+	Colores disponibles: Negro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 5
+	Nombre: Teléfono inteligente
+	Precio: 399.99
+	Colores disponibles: Plata, Negro, Oro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 6
+	Nombre: Portátil
+	Precio: 699.99
+	Colores disponibles: Gris, Plata
+	Tallas disponibles: 13 pulgadas, 15 pulgadas, 17 pulgadas
+	Categoria: Electrónica
+)
+Producto(
+	Id: 7
+	Nombre: Mouse inalámbrico
+	Precio: 19.99
+	Colores disponibles: Negro, Blanco, Rojo
+	Categoria: Accesorios
+)
+Producto(
+	Id: 8
+	Nombre: Teclado mecánico
+	Precio: 59.99
+	Colores disponibles: Negro, Blanco, RGB
+	Categoria: Accesorios
+)
+Producto(
+	Id: 9
+	Nombre: Auriculares Bluetooth
+	Precio: 39.99
+	Colores disponibles: Negro, Blanco, Azul
+	Categoria: Electrónica
+)
+Producto(
+	Id: 10
+	Nombre: Tableta
+	Precio: 179.99
+	Colores disponibles: Negro, Plata
+	Categoria: Electrónica
+)
+Producto(
+	Id: 11
+	Nombre: Impresora láser
+	Precio: 129.99
+	Colores disponibles: Blanco, Negro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 12
+	Nombre: Reloj inteligente
+	Precio: 69.99
+	Colores disponibles: Negro, Plata, Oro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 13
+	Nombre: Bicicleta de montaña
+	Precio: 299.99
+	Colores disponibles: Rojo, Verde, Negro
+	Tallas disponibles: S, M, L, XL
+	Categoria: Deportes
+)
+Producto(
+	Id: 14
+	Nombre: Cafetera
+	Precio: 49.99
+	Colores disponibles: Negro, Plata, Rojo
+	Categoria: Cocina
+)
+Producto(
+	Id: 15
+	Nombre: Silla de oficina
+	Precio: 89.99
+	Colores disponibles: Negro, Gris, Azul
+	Categoria: Muebles
+)
+Producto(
+	Id: 16
+	Nombre: Licuadora
+	Precio: 39.99
+	Colores disponibles: Blanco, Negro, Rojo
+	Categoria: Cocina
+)
+Producto(
+	Id: 17
+	Nombre: Ventilador de torre
+	Precio: 29.99
+	Colores disponibles: Blanco, Negro
+	Categoria: Electrodomésticos
+)
+Producto(
+	Id: 18
+	Nombre: Lámpara de escritorio
+	Precio: 19.99
+	Colores disponibles: Negro, Blanco, Plata
+	Categoria: Iluminación
+)
+Producto(
+	Id: 19
+	Nombre: Caja de herramientas
+	Precio: 79.99
+	Colores disponibles: Rojo, Negro
+	Categoria: Herramientas
+)
+Producto(
+	Id: 20
+	Nombre: Botines de fútbol
+	Precio: 59.99
+	Colores disponibles: Rojo, Azul, Negro
+	Tallas disponibles: 38, 39, 40, 41, 42
+	Categoria: Deportes
+)
+
+--------------------------------------------------------------------
+d)
+Inventario:
+Producto(
+	Id: 1
+	Nombre: Camiseta
+	Precio: 20.99
+	Colores disponibles: Rojo, Azul, Negro
+	Tallas disponibles: S, M, L, XL
+	Categoria: Ropa
+)
+Producto(
+	Id: 2
+	Nombre: Zapatos deportivos
+	Precio: 49.99
+	Colores disponibles: Blanco, Negro, Gris
+	Tallas disponibles: 36, 37, 38, 39, 40, 41, 42
+	Categoria: Calzado
+)
+Producto(
+	Id: 3
+	Nombre: Mochila
+	Precio: 29.99
+	Colores disponibles: Azul, Verde, Negro
+	Categoria: Accesorios
+)
+Producto(
+	Id: 4
+	Nombre: Cámara digital
+	Precio: 299.99
+	Colores disponibles: Negro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 5
+	Nombre: Teléfono inteligente
+	Precio: 399.99
+	Colores disponibles: Plata, Negro, Oro
+	Opciones de almacenamiento: 64GB, 128GB, 256GB
+	Categoria: Electrónica
+)
+Producto(
+	Id: 6
+	Nombre: Portátil
+	Precio: 699.99
+	Colores disponibles: Gris, Plata
+	Tallas disponibles: 13 pulgadas, 15 pulgadas, 17 pulgadas
+	Categoria: Electrónica
+)
+Producto(
+	Id: 7
+	Nombre: Mouse inalámbrico
+	Precio: 19.99
+	Colores disponibles: Negro, Blanco, Rojo
+	Categoria: Accesorios
+)
+Producto(
+	Id: 8
+	Nombre: Teclado mecánico
+	Precio: 59.99
+	Colores disponibles: Negro, Blanco, RGB
+	Categoria: Accesorios
+)
+Producto(
+	Id: 9
+	Nombre: Auriculares Bluetooth
+	Precio: 39.99
+	Colores disponibles: Negro, Blanco, Azul
+	Categoria: Electrónica
+)
+Producto(
+	Id: 10
+	Nombre: Tableta
+	Precio: 179.99
+	Colores disponibles: Negro, Plata
+	Opciones de almacenamiento: 32GB, 64GB, 128GB
+	Categoria: Electrónica
+)
+Producto(
+	Id: 11
+	Nombre: Impresora láser
+	Precio: 129.99
+	Colores disponibles: Blanco, Negro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 12
+	Nombre: Reloj inteligente
+	Precio: 69.99
+	Colores disponibles: Negro, Plata, Oro
+	Categoria: Electrónica
+)
+Producto(
+	Id: 13
+	Nombre: Bicicleta de montaña
+	Precio: 299.99
+	Colores disponibles: Rojo, Verde, Negro
+	Tallas disponibles: S, M, L, XL
+	Categoria: Deportes
+)
+Producto(
+	Id: 14
+	Nombre: Cafetera
+	Precio: 49.99
+	Colores disponibles: Negro, Plata, Rojo
+	Categoria: Cocina
+)
+Producto(
+	Id: 15
+	Nombre: Silla de oficina
+	Precio: 89.99
+	Colores disponibles: Negro, Gris, Azul
+	Categoria: Muebles
+)
+Producto(
+	Id: 16
+	Nombre: Licuadora
+	Precio: 39.99
+	Colores disponibles: Blanco, Negro, Rojo
+	Categoria: Cocina
+)
+Producto(
+	Id: 17
+	Nombre: Ventilador de torre
+	Precio: 29.99
+	Colores disponibles: Blanco, Negro
+	Categoria: Electrodomésticos
+)
+Producto(
+	Id: 18
+	Nombre: Lámpara de escritorio
+	Precio: 19.99
+	Colores disponibles: Negro, Blanco, Plata
+	Categoria: Iluminación
+)
+Producto(
+	Id: 19
+	Nombre: Caja de herramientas
+	Precio: 79.99
+	Colores disponibles: Rojo, Negro
+	Categoria: Herramientas
+)
+Producto(
+	Id: 20
+	Nombre: Botines de fútbol
+	Precio: 59.99
+	Colores disponibles: Rojo, Azul, Negro
+	Tallas disponibles: 38, 39, 40, 41, 42
+	Categoria: Deportes
+)
