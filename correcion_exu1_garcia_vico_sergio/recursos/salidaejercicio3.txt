@@ -1,0 +1,14 @@
+====================================================================
+ Salida del Ejercicio 3
+--------------------------------------------------------------------
+a)
+[Rojo, Azul, Negro, Blanco, Gris, Verde, Plata, Oro, RGB]
+
+--------------------------------------------------------------------
+b)
+Auriculares Bluetooth, Cámara digital, Impresora láser, Mochila, Mouse inalámbrico, Portátil, Reloj inteligente, Tableta, Teclado mecánico, Teléfono inteligente
+
+--------------------------------------------------------------------
+c)
+35.49
+
