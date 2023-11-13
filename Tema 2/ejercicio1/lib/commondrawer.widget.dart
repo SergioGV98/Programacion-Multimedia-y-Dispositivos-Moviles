@@ -1,62 +1,9 @@
-// ignore_for_file: prefer_const_constructors, avoid_print, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 
-class Ejercicio1Page extends StatefulWidget {
-  const Ejercicio1Page({Key? key}) : super(key: key);
-
-  @override
-  State<Ejercicio1Page> createState() => _Ejercicio1PageState();
-}
-
-class _Ejercicio1PageState extends State<Ejercicio1Page> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Ejercicio 1"),
-        actions: [
-          IconButton(
-            onPressed: () {
-              print("Share");
-            },
-            icon: Icon(Icons.share),
-          ),
-          IconButton(
-            onPressed: () {
-              print("Edit");
-            },
-            icon: Icon(Icons.edit),
-          )
-        ],
-      ),
-      drawer: MyDrawer(),
-      body: CommonBody(
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: [
-            Positioned(
-              top: 40,
-              child: Text(
-                "Página principal",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Floating Action Button");
-        },
-        child: Icon(Icons.add),
-      ),
-    );
-  }
-}
-
-class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+class CommonDrawer extends StatelessWidget {
+  const CommonDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -140,28 +87,6 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CommonBody extends StatelessWidget {
-  final Widget child;
-
-  CommonBody({required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Colors.blue, Colors.indigo],
-        ),
-      ),
-      child: Center(
-        child: child,
       ),
     );
   }
