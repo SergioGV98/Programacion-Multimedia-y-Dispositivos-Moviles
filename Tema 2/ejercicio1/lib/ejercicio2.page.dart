@@ -16,6 +16,7 @@ class _Ejercicio2PageState extends State<Ejercicio2Page> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Ejercicio 2"),
+        centerTitle: true,
         actions: [
           PopupMenuButton<String>(
             itemBuilder: (BuildContext context) {
@@ -82,7 +83,7 @@ class _Ejercicio2PageState extends State<Ejercicio2Page> {
             SizedBox(height: 16),
             TextButton(
               onPressed: () {
-                print("ext button: for low-emphasis actions");
+                print("Text button: for low-emphasis actions");
               },
               child: Text("Text button"),
             ),
