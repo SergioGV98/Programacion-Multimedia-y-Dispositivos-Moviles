@@ -1,8 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:gestionestado/homepage.v1/home.page.dart';
-import 'package:gestionestado/homepage.v2/home.page.dart';
+import 'package:listadoaditivos/models/estadofiltro.class.dart';
+import 'package:provider/provider.dart';
+
+import 'data/aditivos.json.dart';
+import 'pages/listadoaditivos.page.dart';
+import 'models/directorioaditivos.class.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,16 +15,23 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: MyHomePageV2State(
-        initialValue: 0,
+    return MultiProvider(
+      providers: [
+        Provider<DirectorioAditivos>(
+            create: (_) => DirectorioAditivos.fromJson(aditivosJson)),
+        ChangeNotifierProvider<EstadoFiltro>(create: (_) => EstadoFiltro()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: false,
+        ),
+        home: ListadoAditivosPage(),
       ),
     );
   }
