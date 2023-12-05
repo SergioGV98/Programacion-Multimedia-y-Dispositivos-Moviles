@@ -86,4 +86,7 @@ class Contacto {
       isFavorite: datos["favorito"],
     );
   }
+
+  //Implementar equals, para ver si ahi algun contacto igual a otro (Comparar nombres, apellidos y email)
+  //Getter isBlank
 }
