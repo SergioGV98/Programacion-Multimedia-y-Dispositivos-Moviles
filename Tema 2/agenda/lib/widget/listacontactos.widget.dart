@@ -1,5 +1,5 @@
 import 'package:agenda/class/contacto.class.dart';
-import 'package:agenda/widget/contactotitle.widget.dart';
+import 'package:agenda/widget/contactotile.widget.dart';
 import 'package:flutter/material.dart';
 
 class ListaContactos extends StatefulWidget {
@@ -16,7 +16,7 @@ class _ListaContactosState extends State<ListaContactos> {
   Widget build(BuildContext context) {
     return ListView.builder(
         itemCount: widget.contactos.length,
-        itemBuilder: (context, index) => ContactoTitle(
+        itemBuilder: (context, index) => ContactoTile(
               contacto: widget.contactos[index],
             ));
   }

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../class/contacto.class.dart';
 
-class ContactoTitle extends StatelessWidget {
+class ContactoTile extends StatelessWidget {
   final Contacto contacto;
-  const ContactoTitle({super.key, required this.contacto});
+  const ContactoTile({super.key, required this.contacto});
 
   @override
   Widget build(BuildContext context) {
