@@ -17,7 +17,7 @@ List<Map<String, dynamic>> contactosJson = [
     "telefono": "123456789",
     "cumpleaños": "Feb 15, 1990",
     "etiquetas": ["Deporte"],
-    "favorito": false
+    "favorito": true
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@ List<Map<String, dynamic>> contactosJson = [
     "telefono": "555555555",
     "cumpleaños": "Nov 20, 1995",
     "etiquetas": ["Trabajo"],
-    "favorito": false
+    "favorito": true
   },
   {
     "id": 5,
@@ -87,7 +87,7 @@ List<Map<String, dynamic>> contactosJson = [
     "telefono": "222333444",
     "cumpleaños": "Oct 30, 1983",
     "etiquetas": ["Trabajo"],
-    "favorito": false
+    "favorito": true
   },
   {
     "id": 10,
@@ -147,7 +147,7 @@ List<Map<String, dynamic>> contactosJson = [
     "telefono": "111000999",
     "cumpleaños": "Nov 12, 1978",
     "etiquetas": ["Familia"],
-    "favorito": false
+    "favorito": true
   },
   {
     "id": 16,
@@ -197,6 +197,6 @@ List<Map<String, dynamic>> contactosJson = [
     "telefono": "666555444",
     "cumpleaños": "May 7, 1994",
     "etiquetas": ["Trabajo"],
-    "favorito": false
+    "favorito": true
   }
 ];

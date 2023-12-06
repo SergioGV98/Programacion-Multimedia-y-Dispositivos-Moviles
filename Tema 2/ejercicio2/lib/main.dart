@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Ejercicios Flutter',
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: const Ejercicio5(),
+      home: const Ejercicio3(),
     );
   }
 }
