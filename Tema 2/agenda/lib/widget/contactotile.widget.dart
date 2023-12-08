@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../class/contacto.class.dart';
+import '../pages/contactoinfo.page.dart';
 
 class ContactoTile extends StatelessWidget {
   final Contacto contacto;
@@ -42,7 +43,7 @@ class ContactoTile extends StatelessWidget {
         itemBuilder: (BuildContext context) => [
           PopupMenuItem(
               child: ListTile(
-                  onTap: () {},
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ContactInfo(contacto: contacto,)));},
                   contentPadding: EdgeInsets.all(0),
                   leading: Icon(Icons.remove_red_eye),
                   title: Text("Ver"))),

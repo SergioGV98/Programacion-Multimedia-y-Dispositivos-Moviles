@@ -18,7 +18,7 @@ class MenuTabBar extends StatelessWidget {
                   bottom: BorderSide(color: Colors.white, width: 3.0))),
           tabs: [
             Tab(text: "Contactos", icon: Icon(Icons.contacts_sharp)),
-            Tab(text: "Favoritos", icon: Icon(Icons.favorite)),
+            Tab(text: "Favoritos", icon: Icon(Icons.star)),
           ],
         ),
       ),
