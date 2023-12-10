@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
+import 'package:agenda/models/directoriocontactos.class.dart';
 import 'package:flutter/material.dart';
 
 import 'package:agenda/class/contacto.class.dart';
@@ -42,7 +43,16 @@ class _ContactInfoState extends State<ContactInfo> {
       backgroundColor: Color.fromARGB(171, 39, 39, 39),
       appBar: AppBar(actions: [
         IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
-        IconButton(onPressed: () {}, icon: Icon(Icons.star_border))
+        IconButton(
+            onPressed: () {
+              setState(() {
+                Contacto copia = contacto.copyWith();
+                copia.isFavorite = true;
+                contactos.actualizarContacto(copia);
+                contactos.guardarContactosEnJson();
+              });
+            },
+            icon: Icon(contacto.isFavorite! ? Icons.star : Icons.star_border))
       ]),
       body: Column(children: [
         Padding(padding: EdgeInsets.only(top: 20)),

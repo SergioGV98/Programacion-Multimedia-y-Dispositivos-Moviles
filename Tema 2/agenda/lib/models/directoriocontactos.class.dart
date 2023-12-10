@@ -35,6 +35,37 @@ class DirectorioContactos {
     }
   }
 
+  void actualizarContacto(Contacto contacto) {
+    // Encuentra el índice del contacto en la lista de contactos
+    final index = items.indexWhere((c) => c.id == contacto.id);
+
+    if (index != -1) {
+      // Actualiza el estado del contacto en la lista de contactos
+      items[index] = contacto;
+
+      // Guarda la lista de contactos actualizada en tu JSON
+      guardarContactosEnJson();
+    }
+  }
+
+  void guardarContactosEnJson() async {
+  try {
+    // Obtén la instancia de DirectorioContactos
+    DirectorioContactos directorioContactos = await DirectorioContactos.load(path: './data/contactos.json');
+
+    // Convierte la lista de contactos a formato JSON
+    String contactosJson = jsonEncode(directorioContactos.toJson());
+
+    // Escribe el JSON en un archivo
+    await File('contactos.json').writeAsString(contactosJson);
+  } catch (e) {
+    print("Error al guardar contactos en JSON: $e");
+  }
+}
+
+
+
+
   @override
   String toString() {
     return toJson().toString();
