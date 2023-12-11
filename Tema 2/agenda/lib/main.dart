@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'data/contactos.json.dart';
+import 'models/contactosprovider.class.dart';
 import 'pages/listadocontactos.page.dart';
 
 void main() {
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
         Provider<DirectorioContactos>(
             create: (_) => DirectorioContactos.fromJson(contactosJson)),
         ChangeNotifierProvider<EstadoFiltro>(create: (_) => EstadoFiltro()),
+        ChangeNotifierProvider<ContactosProvider>(create: (_) => ContactosProvider())
       ],
       child: MaterialApp(
           title: 'Agenda',
           theme: ThemeData(
-            colorScheme:
-                ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 252, 78, 55)),
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: Color.fromARGB(255, 252, 78, 55)),
             useMaterial3: false,
           ),
           home: SafeArea(child: ListadoContactoPage())),

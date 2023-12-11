@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ListaContactos extends StatefulWidget {
-  const ListaContactos({super.key, required this.contactos});
+  const ListaContactos(
+      {super.key, required this.contactos, required this.ordenDescendente});
 
   final List<Contacto> contactos;
+  final bool ordenDescendente;
 
   @override
   State<ListaContactos> createState() => _ListaContactosState();
@@ -29,21 +31,29 @@ class _ListaContactosState extends State<ListaContactos> {
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-        listenable: filtro,
-        builder: (context, child) {
-          List<Contacto> contactosAMostrar = contactos
-              .where((a) =>
-                  a.labels!.contains("Familia") && filtro.familia ||
-                  a.labels!.contains("Amistad") && filtro.amistad ||
-                  a.labels!.contains("Deporte") && filtro.deporte ||
-                  a.labels!.contains("Trabajo") && filtro.trabajo ||
-                  a.labels!.contains("No etiquetados") && filtro.ninguno)
-              .toList();
-          return ListView.builder(
-            itemCount: contactosAMostrar.length,
-            itemBuilder: (context, index) =>
-                ContactoTile(contacto: contactosAMostrar[index]),
-          );
-        });
+      listenable: filtro,
+      builder: (context, child) {
+        List<Contacto> contactosAMostrar = contactos
+            .where((a) =>
+                a.labels!.contains("Familia") && filtro.familia ||
+                a.labels!.contains("Amistad") && filtro.amistad ||
+                a.labels!.contains("Deporte") && filtro.deporte ||
+                a.labels!.contains("Trabajo") && filtro.trabajo ||
+                a.labels!.contains("No etiquetados") && filtro.ninguno)
+            .toList();
+
+        if (widget.ordenDescendente) {
+          contactosAMostrar.sort((a, b) => b.name.compareTo(a.name));
+        } else {
+          contactosAMostrar.sort((a, b) => a.name.compareTo(b.name));
+        }
+
+        return ListView.builder(
+          itemCount: contactosAMostrar.length,
+          itemBuilder: (context, index) =>
+              ContactoTile(contacto: contactosAMostrar[index]),
+        );
+      },
+    );
   }
 }

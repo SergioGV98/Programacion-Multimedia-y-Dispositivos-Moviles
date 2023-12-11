@@ -6,9 +6,11 @@ import '../models/estadofiltro.class.dart';
 import '../widget/contactotile.widget.dart';
 
 class ListaContactosFavoritos extends StatefulWidget {
-  const ListaContactosFavoritos({super.key, required this.contactos});
+  const ListaContactosFavoritos(
+      {super.key, required this.contactos, required this.ordenDescendente});
 
   final List<Contacto> contactos;
+  final bool ordenDescendente;
 
   @override
   State<ListaContactosFavoritos> createState() => _ListaContactosState();
@@ -38,6 +40,12 @@ class _ListaContactosState extends State<ListaContactosFavoritos> {
             a.labels!.contains("Trabajo") && filtro.trabajo ||
             a.labels!.contains("No etiquetados") && filtro.ninguno)
         .toList();
+
+    if (widget.ordenDescendente) {
+      contactosAMostrar.sort((a, b) => b.name.compareTo(a.name));
+    } else {
+      contactosAMostrar.sort((a, b) => a.name.compareTo(b.name));
+    }
 
     return ListView.builder(
       itemCount: contactosAMostrar.length,

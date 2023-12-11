@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../widget/contactofiltrobutton.widget.dart';
 import '../widget/menutabbar.widget.dart';
+import 'contactoañadir.page.dart';
 import 'listacontactosfavoritos.page.dart';
 
 class ListadoContactoPage extends StatefulWidget {
@@ -16,6 +17,8 @@ class ListadoContactoPage extends StatefulWidget {
 }
 
 class _ListadoContactoPageState extends State<ListadoContactoPage> {
+  bool _ordenDescendente = false;
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -23,19 +26,30 @@ class _ListadoContactoPageState extends State<ListadoContactoPage> {
       child: Scaffold(
         body: TabBarView(
           children: [
-            ListaContactos(contactos: contactos.items),
-            ListaContactosFavoritos(contactos: contactos.items),
+            ListaContactos(contactos: contactos.items, ordenDescendente: _ordenDescendente,),
+            ListaContactosFavoritos(contactos: contactos.items, ordenDescendente: _ordenDescendente),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-            onPressed: () {}, child: Icon(Icons.add), shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7)))),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Contactoadd()));
+            },
+            child: Icon(Icons.add),
+            shape: BeveledRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(7)))),
         appBar: AppBar(
           title: Text("Agenda"),
           actions: [
             ContactFilterButton(),
-            Icon(Icons.youtube_searched_for_outlined),
-            SizedBox(width: 16)
+            IconButton(
+                onPressed: () {
+                  setState(() {
+                    _ordenDescendente = !_ordenDescendente;
+                  });
+                },
+                icon: Icon(Icons.sort_by_alpha)),
           ],
         ),
         bottomNavigationBar: MenuTabBar(),
