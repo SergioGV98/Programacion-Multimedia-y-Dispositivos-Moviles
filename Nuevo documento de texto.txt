@@ -14,4 +14,4 @@ La clase que nos va a dar usa Fechas. (Necesitamos formatear fechas)
 
 Proyecto nombre exflutter (Instalar Provider, intl)
 
-No cae ChangeNotifer (Solo Provider)
+No cae ChangeProviderNotifer (Solo Provider)

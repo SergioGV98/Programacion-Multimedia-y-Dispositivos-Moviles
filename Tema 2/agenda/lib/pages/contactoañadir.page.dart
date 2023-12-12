@@ -174,6 +174,7 @@ class _ContactoaddState extends State<Contactoadd> {
       "email": _emailController.text,
       "telefono": _telefonoController.text,
       "cumpleaños": _fechaNacimientoController.text,
+      //"creacion": DateTime.now(),
       "etiquetas": [],
       "favorito": false,
     };

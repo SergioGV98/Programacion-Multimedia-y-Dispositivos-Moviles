@@ -78,37 +78,43 @@ class _ContactInfoState extends State<ContactInfo> {
         ),
         Padding(
             padding: const EdgeInsets.only(left: 18, top: 7),
-            child: Row(children: [
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text("Correo electrónico",
-                    style: TextStyle(color: Colors.white, fontSize: 16)),
-                Text(contacto.email,
-                    style: TextStyle(color: Colors.white, fontSize: 23))
+            child: Expanded(
+              child: Row(children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text("Correo electrónico",
+                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                  Text(contacto.email,
+                      style: TextStyle(color: Colors.white, fontSize: 23))
+                ]),
+                Expanded(
+                  child: Icon(
+                    Icons.email,
+                    color: Colors.white,
+                  ),
+                )
               ]),
-              SizedBox(width: 16),
-              Icon(
-                Icons.email,
-                color: Colors.white,
-              )
-            ])),
+            )),
         Divider(
           color: Colors.grey,
         ),
         Padding(
             padding: const EdgeInsets.only(left: 18, top: 7),
-            child: Row(children: [
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text("Teléfono",
-                    style: TextStyle(color: Colors.white, fontSize: 16)),
-                Text(contacto.phone.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 23))
+            child: Expanded(
+              child: Row(children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text("Teléfono",
+                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                  Text(contacto.phone.toString(),
+                      style: TextStyle(color: Colors.white, fontSize: 23))
+                ]),
+                Expanded(
+                  child: Icon(
+                    Icons.phone,
+                    color: Colors.white,
+                  ),
+                )
               ]),
-              SizedBox(width: 116),
-              Icon(
-                Icons.phone,
-                color: Colors.white,
-              )
-            ])),
+            )),
         Divider(
           color: Colors.grey,
         ),
