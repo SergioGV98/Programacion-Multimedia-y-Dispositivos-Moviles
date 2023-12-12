@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "exflutter" "\0"
+            VALUE "FileDescription", "exflutterrepaso" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "exflutter" "\0"
+            VALUE "InternalName", "exflutterrepaso" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "exflutter.exe" "\0"
-            VALUE "ProductName", "exflutter" "\0"
+            VALUE "OriginalFilename", "exflutterrepaso.exe" "\0"
+            VALUE "ProductName", "exflutterrepaso" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
