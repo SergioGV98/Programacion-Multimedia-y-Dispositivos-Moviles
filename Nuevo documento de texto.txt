@@ -3,8 +3,8 @@ con metodos para usarlo en el examen, tambien nos da el repositorio con los dato
 El archivo main nos lo va a dar programado y comentado cada body para cada ejercicio.
 Cada ejercicio del examen va a ir en un widget page separado.
 
-Ejercicio 1 - Manejo basico de los widget, recibe otro como parametro, decoracion cambiar color, sombra, etc.
-Ejercicio 2 - Ejercicio layout con row, column, container, flex. Pondremos imagenes y textos, etc.
+Ejercicio 1 - Manejo basico de los widget, recibe otro como parametro, decoracion cambiar color, sombra, etc. (Relacion ejercicio 2.1 del 1 al 5)
+Ejercicio 2 - Ejercicio layout con row, column, container, flex. Pondremos imagenes y textos, etc. (Crear un layout Relacion 2.1 tipo 6 con textos e imagenes)
 Ejercicio 3 - Construir una pagina con elementos tipicos, navbar, menutabbar, drawer.
 Ejercicio 4 - Mostrar un listado de cosas con los datos que nos va a proporcionar. Cuando pinchemos en una de esos
 item navegamos a otra pagina. Inyeccion de dependencia con Provider.
